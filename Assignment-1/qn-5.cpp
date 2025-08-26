@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 
@@ -26,4 +26,5 @@ int main(){
     cout<<i+1<<" column sum ="<<sum<<endl;
   }
 }
+
 
