@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int createArray(int arr[], int n) {
@@ -129,3 +129,4 @@ int main() {
     }
     return 0;
 }
+
