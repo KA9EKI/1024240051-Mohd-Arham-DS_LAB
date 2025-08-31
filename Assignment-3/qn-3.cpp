@@ -10,13 +10,16 @@ bool checkParenthesis(string exp){
     for(int i=0;i<exp.length();i++){
         if(exp[i]=='('||exp[i]=='{'||exp[i]=='['){
             s.push(exp[i]);
-        }else if((exp[i]==')'||exp[i]=='}'||exp[i]==']')&& !s.empty()){
-            if((s.top()=='('&&exp[i]==')')||(s.top()=='{'&&exp[i]=='}')||(s.top()=='['&&exp[i]==']')){
-                s.pop();
+        }else{
+            if (s.empty())
+             return false;
+            if((exp[i]==')'||exp[i]=='}'||exp[i]==']') ){
+                if((s.top()=='(' && exp[i]==')')||(s.top()=='{' && exp[i]=='}')||(s.top()=='[' && exp[i]==']')){
+                    s.pop();
             }else{
                 return false;
             }
-        }
+        } 
     }
     if(s.empty()){
         return true;
@@ -35,4 +38,5 @@ int main()
     }
     
     return 0;
+
 }
